@@ -41,6 +41,5 @@ do
     if [[ -z $OPPONENT_ID ]]
       then OPPONENT_ID=null
     fi
-    # populate games table
     INSERT_GAME=$($PSQL "INSERT INTO games(year,round,winner_id,opponent_id,winner_goals,opponent_goals) values($YEAR,'$ROUND',$WINNER_ID,$OPPONENT_ID,$WINNER_GOALS,$OPPONENT_GOALS)");
 done
